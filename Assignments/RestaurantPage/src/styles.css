@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+nav button.active {
+    background-color: #e74c3c;
+}
+
+/* Content Container */
+#content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Home Page Styles */
+.home-page {
+    text-align: center;
+}
+
+.home-page h1 {
+    color: #2c3e50;
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-page p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.home-page h2 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.hours-list {
+    list-style: none;
+    font-size: 18px;
+    color: #555;
+    line-height: 2;
+}
+
+.address {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .home-page h1 {
+        font-size: 32px;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    nav button {
+        width: 100%;
+    }
+}
+
+/* ...existing code... */
+
+/* Menu Page Styles */
+.menu-page {
+    padding: 20px;
+}
+
+.menu-page h1 {
+    color: #2c3e50;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-category {
+    color: #e74c3c;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateX(10px);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.item-price {
+    color: #e74c3c;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-description {
+    color: #666;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* About Page Styles */
+.about-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-page h1 {
+    color: #2c3e50;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.about-page p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* ...existing code... */
