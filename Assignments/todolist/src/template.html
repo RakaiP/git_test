@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>📝 My Tasks</h1>
+            </div>
+            
+            <div class="default-lists">
+                <!-- ❌ WAS: list-itet -->
+                <!-- ✅ FIXED: list-item -->
+                <button class="list-item active" data-filter="all">
+                    📋 All Tasks
+                    <span class="count">0</span>
+                </button>
+                <button class="list-item" data-filter="today">
+                    ⭐ Today
+                    <span class="count">0</span>
+                </button>
+                <button class="list-item" data-filter="week">
+                    📅 This Week
+                    <span class="count">0</span>
+                </button>
+            </div>
+
+            <div class="projects-section">
+                <div class="projects-header">
+                    <h2>Projects</h2>
+                    <button class="add-project-btn" id="addProjectBtn">+</button>
+                </div>
+                <div class="projects-list" id="projectsList"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2 id="currentViewTitle">All Tasks</h2>
+                <button class="add-todo-btn" id="addTodoBtn">+ Add Task</button>
+            </div>
+            
+            <div class="todos-container" id="todosContainer"></div>
+        </main>
+    </div>
+
+    <!-- Add Todo Modal -->
+    <dialog id="todoModal" class="modal">
+        <form id="todoForm">
+            <h2>Add New Task</h2>
+            
+            <div class="form-group">
+                <label for="todoTitle">Title *</label>
+                <input type="text" id="todoTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="todoDescription">Description</label>
+                <textarea id="todoDescription" rows="3"></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="todoDueDate">Due Date *</label>
+                    <input type="date" id="todoDueDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="todoPriority">Priority</label>
+                    <select id="todoPriority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="todoProject">Project</label>
+                <select id="todoProject">
+                    <option value="default">Default</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-cancel" id="cancelTodoBtn">Cancel</button>
+                <button type="submit" class="btn-submit">Add Task</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Add Project Modal -->
+    <dialog id="projectModal" class="modal">
+        <form id="projectForm">
+            <h2>New Project</h2>
+            
+            <div class="form-group">
+                <label for="projectName">Project Name *</label>
+                <input type="text" id="projectName" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-cancel" id="cancelProjectBtn">Cancel</button>
+                <button type="submit" class="btn-submit">Create Project</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Todo Detail Modal -->
+    <dialog id="todoDetailModal" class="modal detail-modal">
+        <div class="detail-content">
+            <button class="close-btn" id="closeDetailBtn">×</button>
+            <div id="todoDetailContent"></div>
+        </div>
+    </dialog>
+</body>
+</html>
