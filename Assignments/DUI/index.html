@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>My DUI Assignment</h1>
+        <div class="nav">
+            <div class="nav-item">Home</div>
+            <div class="nav-item dropdown">
+                <button id="dropdownBtn">Features ▼</button>
+                <div class="dropdown-menu" id="dropdownMenu" hidden>
+                    <a href="#">Feature 1</a>
+                    <a href="#">Feature 2</a>
+                    <a href="#">Feature 3</a>
+                </div>
+            </div>
+            <div class="nav-item">Contact</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="carousel-container">
+            <div class="carousel-frame" id="carouselFrame">  <!-- Parent (visible window) -->
+                <div class="carousel-images" id="carouselImages">  <!-- Child (wider) -->
+                    <img src="image1.jpg" class="carousel-image" alt="Image 1">
+                    <img src="image2.jpg" class="carousel-image" alt="Image 2">
+                    <img src="image3.jpg" class="carousel-image" alt="Image 3">
+                </div>
+            </div>
+            <button id="prevBtn" class="carousel-btn">‹</button>
+            <button id="nextBtn" class="carousel-btn">›</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
